@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { time } from "../context/timeContext";
 
-const Segment = ({value, name}) => {
+const Segment = ({value, name, onChange}) => {
+    const {isRunning} = useContext(time);
     return (
         <div className="segment">
-            <div className="value">{value}</div>
+            <input type="number" readOnly={isRunning} className="value"  value={value} onChange={onChange}/>
             <div className="name">{name}</div>
         </div>
     );
