@@ -12,11 +12,15 @@ const TimeContextProvider = (props) => {
     const [isRunning, setIsRunning] = useState(false);
 
     const getInitialTime = () => {
-        const t = sec + 60 * min + 60 * 60 * hours + 60 * 60 * 24 * days;
-        if(t === 0) {
-            alert("Set time please")
+        const t =
+            parseInt(sec) +
+            60 * parseInt(min) +
+            60 * 60 * parseInt(hours) +
+            60 * 60 * 24 * parseInt(days);
+        if (t === 0) {
+            alert("Set time please");
         }
-        if(t){
+        if (t) {
             setCurTime(t);
         }
     };

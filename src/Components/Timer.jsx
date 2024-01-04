@@ -9,16 +9,16 @@ const Timer = () => {
     return (
         <div className="timer">
 
-            <Segment value={days} name="Days" onChange={(e)=>setDays(parseInt(e.target.value))}/>
+            <Segment value={days} name="Days" onChange={(e)=>setDays(e.target.value)}/>
             <span className="colon">:</span>
 
-            <Segment value={hours} name="Hours" onChange={(e)=>setHours(parseInt(e.target.value))} />
+            <Segment value={hours} name="Hours" onChange={(e)=>setHours(e.target.value)} />
             <span className="colon">:</span>
 
-            <Segment value={min} name="Minutes" onChange={(e)=>setMin(parseInt(e.target.value))} />
+            <Segment value={min} name="Minutes" onChange={(e)=>setMin(e.target.value)} />
             <span className="colon">:</span>
 
-            <Segment value={sec} name="Seconds" onChange={(e)=>setSec(parseInt(e.target.value))}/>
+            <Segment value={sec} name="Seconds" onChange={(e)=>setSec(e.target.value)}/>
         </div>
     );
 };

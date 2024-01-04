@@ -20,7 +20,6 @@ function App() {
     } = useContext(time);
     const audio = new Audio(ting);
 
-
     useEffect(() => {
         let timer;
 
@@ -57,9 +56,10 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Countdown Timer</h1>
-            <h3>By Piyush Bhagwat</h3>
-
+            <div>
+                <h1>Countdown Timer</h1>
+                <h3>By Piyush Bhagwat</h3>
+            </div>
             <div className="timer-container">
                 <Timer />
 
