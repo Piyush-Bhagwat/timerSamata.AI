@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import "./App.css";
 import Timer from "./Components/Timer";
 import { time } from "./context/timeContext";
+import ting from "./assets/ting.mp3";
 
 function App() {
     const {
@@ -17,6 +18,8 @@ function App() {
         setIsRunning,
         isRunning,
     } = useContext(time);
+    const audio = new Audio(ting);
+
 
     useEffect(() => {
         let timer;
@@ -26,6 +29,7 @@ function App() {
 
             if (t === 0) {
                 setIsRunning(false);
+                audio.play();
             }
 
             setDays(Math.floor(t / (60 * 60 * 24)));
